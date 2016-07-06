@@ -1,0 +1,347 @@
+/**
+ *  Do not remove this comments bellow. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+ */
+// bower:scss
+// endbower
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:600);
+
+body, input{font-family: 'Roboto', sans-serif; font-weight: 300; font-size: 15px; color: #4d4d4d;}
+
+
+*{margin: 0; padding: 0;}
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+}
+:focus{outline: none;}
+html{height: 100%;}
+body {background: #f2f2f2;}
+input{vertical-align: baseline;}
+a, a:hover, a:active{
+  text-decoration: none;
+  color: #cbcbcb;
+  font-weight: 300;
+  font-size: inherit;
+}
+h1,h2,h3,h4{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+}
+a.md-button[disabled], a.md-button.md-raised[disabled], a.md-button.md-fab[disabled], a.md-button.md-accent[disabled], a.md-button.md-warn[disabled], .md-button[disabled], .md-button.md-raised[disabled], .md-button.md-fab[disabled], .md-button.md-accent[disabled], .md-button.md-warn[disabled]{
+  cursor: default;
+}
+
+/* VARIABLES */
+$color: #FF5A00;
+$color-title: #FF5A00;
+$color-btn-circle: #FF5A00;
+$color-background: #FF5A00;
+$color-background-body: #f2f2f2;
+$color-btn-square: #FF5A00;
+
+.btn{display: block; border: none; cursor: pointer;}
+.height-100{height: 100%;}
+.align-center{text-align: center;}
+.align-left{text-align: left;}
+.align-right{text-align: right;}
+.display-inline-block{display: inline-block; vertical-align: middle;}
+.helper{width: 0; height: 100%; display: inline-block; vertical-align: middle;}
+
+.wrapper-login{
+  background-color: $color-background-body;
+  height: 100%; 
+  padding: 15px;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+#login{width: 360px; position: relative;}
+
+
+.login-box{
+    background-color: #fff; 
+    padding: 50px 0; 
+    background-color: #fff;
+    position: relative; 
+    z-index: 2;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.15);
+}
+.login-box.color{
+  background-color: $color-background;
+}
+.login-box .login-box-inner{position: relative;}
+.login-box .form-group{margin-bottom: 15px;}
+.login-box .form-group.last{margin-bottom: 0;}
+
+.login-header{
+  position: relative;
+  text-align: left;
+  margin-bottom: 20px;
+  border-left: 5px solid $color-title;
+  padding-left: 35px;
+    h1{
+      font-size: 29px;
+      color: $color-title;
+    }
+}
+
+#login .btn-circle{
+      position: absolute;
+      right: -45px;
+      top: 15px;
+      z-index: 3;
+      overflow: hidden;
+    }
+
+#login .btn-circle.is-active{
+  left: 0;
+  top:0
+}    
+
+.btn-circle{
+  display: block;
+  width: 90px;
+  height: 90px;
+  background-color: #fff;
+  color: $color;
+  text-align: center; 
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+
+  .btn-circle-ico{
+    margin: 0;
+    position: absolute; 
+    right: 0; 
+    top: 0; 
+    width: 90px; 
+    height: 90px;
+    z-index: 2;
+    cursor: pointer;
+    md-icon{
+      width: 30px;
+      height: 30px;
+    }
+  }
+  
+}
+.wrapper-register-box{
+    position: relative;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    .login-box{
+      height: 100%;
+      border: 0;
+    }
+    md-input-container .md-input{
+      border-color: #fff;
+    }
+    md-input-container .md-input{
+      color: #fff;
+    }
+    md-input-container:not(.md-input-invalid).md-input-focused .md-input{
+      border-color: #fff;
+      color: #fff;
+    }
+    md-input-container:not(.md-input-invalid).md-input-focused label{
+      color: #fff;
+    }
+    md-input-container:not(.md-input-invalid).md-input-has-value label{
+      color: #fff;
+    }
+    md-input-container.md-input-invalid.md-input-focused label{
+      color: #fff;
+    }
+    md-input-container ng-messages, md-input-container [ng-message], md-input-container [data-ng-message], md-input-container [x-ng-message]{
+      color: #fff;
+    }
+    md-input-container label, md-input-container .md-placeholder{
+      color: #fff;
+    }
+  }
+.btn-circle.color{
+    background-color: $color-background;
+    color: #fff;
+}
+
+.login-body{
+    padding-left: 40px; 
+    padding-right: 40px;
+  }
+
+.login-footer .form-group{
+  margin-bottom: 30px;
+}
+
+
+.login-footer{
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  a{
+     -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+    svg{
+      -webkit-transition: fill 0.3s ease;
+      -moz-transition: fill 0.3s ease;
+      -o-transition: fill 0.3s ease;
+      -ms-transition: fill 0.3s ease;
+      transition: fill 0.3s ease;
+    }
+  }
+  a:hover{
+    color: #4d4d4d;
+    md-icon{
+      svg{
+    
+        fill: #4d4d4d;  
+      }
+      
+    }
+  }
+}
+
+.form-group{position: relative;}
+.form-group label{
+    display:block; 
+    width: 100%; 
+    padding-bottom: 5px; 
+    color: #d7d7d7; text-align: left;
+    font-size: 15px; 
+    z-index: 1;
+    position: relative;
+    top: -2px;
+    -webkit-transform: translate3d(0,28px,0) scale(1);
+    transform: translate3d(0,28px,0) scale(1);
+    transition: -webkit-transform cubic-bezier(.25,.8,.25,1) .25s;
+    transition: transform cubic-bezier(.25,.8,.25,1) .25s;
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+.form-group .line{display: block; position: absolute; left: 0; bottom: 0; width: 0; height: 2px;
+ background-color: $color-btn-circle;
+  z-index: 3;
+  -webkit-transition: width 500ms cubic-bezier(0.785, 0.135, 0.150, 0.860); 
+   -moz-transition: width 500ms cubic-bezier(0.785, 0.135, 0.150, 0.860); 
+     -o-transition: width 500ms cubic-bezier(0.785, 0.135, 0.150, 0.860); 
+        transition: width 500ms cubic-bezier(0.785, 0.135, 0.150, 0.860); /* easeInOutCirc */
+}
+.form-group.is-focused .line{width: 100%;}
+
+.form-group.is-focused label, .form-group.input-have-value label{
+    color: $color-btn-circle;
+    -webkit-transform: translate3d(0,6px,0) scale(.85);
+    transform: translate3d(0,6px,0) scale(.85);
+}
+.form-input{
+    display: block; 
+    width: 100%; 
+    color: #4d4d4d;
+    border: none;  
+    border-bottom: 1px solid #e3e3e3;
+    position: relative; 
+    z-index: 2; 
+    background-color: transparent;
+    font-size: 16px;
+    padding: 2px 2px 1px;
+    border-width: 0 0 1px;
+    line-height: 26px;
+}
+.form-placeholder{
+    pointer-events: none;
+    -webkit-font-smoothing: antialiased;
+    padding-left: 2px;
+    z-index: 1;
+    -webkit-transform: translate3d(0,28px,0) scale(1);
+    transform: translate3d(0,28px,0) scale(1);
+    transition: -webkit-transform cubic-bezier(.25,.8,.25,1) .25s;
+    transition: transform cubic-bezier(.25,.8,.25,1) .25s;
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+.form-button{ 
+  width: 100%; 
+  height: 60px; 
+  border:2px solid $color-btn-square;
+  color: $color-btn-square;
+  margin: 0;
+  font-size: inherit; 
+  font-weight: 400; 
+  background-color: transparent; 
+  -webkit-transition: color 0.3s ease, border-color 0.3s ease;
+    -moz-transition: color 0.3s ease, border-color 0.3s ease;
+    -o-transition: color 0.3s ease, border-color 0.3s ease;
+    -ms-transition: color 0.3s ease, border-color 0.3s ease;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+.form-button[disabled], .form-button[disabled]:hover{
+  border-color: #e3e3e3;
+  color: #d7d7d7;
+  background-color: transparent; color: #d7d7d7;
+}
+.form-button:hover, .md-button:not([disabled]).md-focused, .form-button:active, .form-button.is-valid, .md-button.md-focused, .md-button:not([disabled]):hover{
+  background-color: $color-btn-square;   
+  color: #fff;
+}
+
+
+/* COLOR */
+.login-box.color{
+    h1{
+      color: #fff;
+    }
+    .login-header{
+      border-color: #fff;
+    }
+    .form-input{
+      color: #fff;
+    }
+    .form-group.is-focused label, .form-group.input-have-value label{
+      color: #fff;
+    }
+    .form-group .line{
+      background-color: #fff;
+    }
+    
+    .form-button[disabled], .form-button[disabled]:hover{
+      background-color: #f2f2f2;
+      color: #d7d7d7;
+    }
+    .form-button, .form-button:hover{
+      border-color: transparent;
+      background-color: #fff;
+      color: $color-btn-square;
+    }
+}
+
+
+
+
+/* RESPONSIVE */
+@media only screen and (max-width : 400px) {
+  #login{
+    width: 100%;
+  }
+}
+
+/**
+ *  Do not remove this comments bellow. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector

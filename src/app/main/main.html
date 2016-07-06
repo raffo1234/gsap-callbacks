@@ -1,0 +1,123 @@
+<div class="wrapper-login">
+    <div class="helper"></div><!--
+    --><div id="login" class="display-inline-block">
+        
+          <div class="login-box">
+            <div class="btn-circle-js btn-circle color">
+                  <md-button class="btn-circle-ico md-icon-button" aria-label="Registrar" add-user>
+                      <md-icon  md-svg-icon="assets/icons/ic_add_black_36px.svg" class="display-inline-block"></md-icon>
+                  </md-button>
+                <div class="wrapper-register-box">
+                    <div class="login-box color">
+                        <div class="login-box-inner">
+
+                            <form name="formRegister" action="">
+                                <div class="login-header">
+                                  <h1>REGISTRO</h1>
+                                </div>
+                                <div class="login-body align-left">
+                                
+                                  <md-input-container>
+                                      <label>Email</label>
+                                      <input  type="email"
+                                              ng-required=true
+                                              name="email" 
+                                              ng-model="user.email" 
+                                              validate-email
+                                          >
+                                      <div ng-messages="formRegister.email.$error" ng-if='formRegister.email.$dirty'>
+                                          <div ng-message="required">Ingresa tu usuario.</div>
+                                          <div ng-message="email">Formato no válido.</div>
+                                          <div ng-message="validate-email">Formato no válido.</div>
+                                          
+                                      </div>
+                                  </md-input-container>
+                                  <md-input-container>
+                                      <label>Contraseña</label>
+                                      <input  type="password" 
+                                              name="contrasenia" 
+                                              ng-model="user.contrasenia" 
+                                              ng-required=true
+                                              ng-minlength="8" 
+                                          >
+                                      <div ng-messages="formRegister.contrasenia.$error" ng-if='formRegister.contrasenia.$dirty'>
+                                          <div ng-message="required">Ingresa tu contraseña.</div>
+                                          <div ng-message="minlength">Mínimo 8 carácteres.</div>
+                                      </div>
+                                  </md-input-container>
+                                  <md-input-container>
+                                      <label>Confirmar contraseña</label>
+                                      <input  type="password" 
+                                              name="confirmar" 
+                                              ng-model="user.confirmar" 
+                                              ng-required=true
+                                              ng-pattern="user.contrasenia"  
+                                          >
+                                      <div ng-messages="formRegister.confirmar.$error" ng-if='formRegister.confirmar.$dirty'>
+                                          <div ng-message="required">Ingresa tu contraseña.</div>
+                                          <div ng-message="pattern">Debe ser igual a la contraseña.</div>
+                                      </div>
+                                  </md-input-container>
+                                </div>
+                                <div class="login-footer ">
+                                    <div class="form-group last">
+                                        <md-button disabled ng-disabled="formRegister.$invalid || formRegister.$pending" class="btn form-button">REGISTRAR</md-button>
+                                    </div>
+                                </div>  
+                            </form>
+                          
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <div class="login-box-inner">
+                <div class="login-header">
+                    <h1>LOGIN</h1>
+                </div>
+                <form action="" name="formLogin">
+                    <div class="login-body align-left">
+                      <md-input-container>
+                          <label>Email</label>
+                          <input  type="email"
+                                  ng-required=true
+                                  ng-minlength="2" 
+                                  name="email" 
+                                  ng-model="user.email" 
+                                  validate-email
+                              >
+                          <div ng-messages="formLogin.email.$error" ng-if='formLogin.email.$dirty'>
+                              <div ng-message="required">Ingresa tu usuario</div>
+                              <div ng-message="email">Formato no válido.</div>
+                              <div ng-message="validate-email">Formato no válido.</div>
+                          </div>
+                      </md-input-container>
+                      
+                      <md-input-container>
+                          <label>Contraseña</label>
+                          <input  type="password"
+                                  ng-required=true
+                                  ng-minlength="8" 
+                                  name="password" 
+                                  ng-model="user.password" 
+                              >
+                          <div ng-messages="formLogin.password.$error" ng-if='formLogin.password.$dirty'>
+                              <div ng-message="required">Ingresa tu contraseña.</div>
+                              <div ng-message="minlength">Mínimo 8 carácteres.</div>
+                          </div>
+                      </md-input-container>
+                      
+                    </div>
+                    <div class="login-footer">
+                        <div class="form-group">
+                            <md-button disabled ng-disabled="formLogin.$invalid || formLogin.$pending" class="btn form-button">ENTRAR</md-button>
+                        </div>
+                        <div class="form-group last">
+                          <a href="#/recuperar-contrasenia">¿Olvidaste tu contraseña?</a>
+                        </div>
+                    </div>
+                </form>
+                
+            </div>  
+         </div>  
+    </div>  
+</div>
