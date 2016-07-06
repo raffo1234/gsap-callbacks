@@ -1,18 +1,17 @@
-Login para el Admin Yachay con AngularJs
+Login Animated with GSAP and AngularJs
 ========================================
 ---
 
-Login, registro y recuperación de contraseña para el administrador de Yachay desarrollado con AngularJS
 
 
-Dependencias
+Dependencies
 -----------
 ---
 * [Node.js](https://nodejs.org/)
 * [Bower](http://bower.io/)
 * [Gulp](http://gulpjs.com/)
 
-Instalación
+Install
 ------------
 ---
 ```
@@ -20,7 +19,7 @@ git clone https://git.yachay.pe/devteam/login-admin.git
 bower install
 npm install
 ```
-Uso
+Use
 -----
 ---
 ```
